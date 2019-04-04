@@ -1,0 +1,84 @@
+.mainContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    @media screen and(max-width: 1300px) {
+        padding: 0 20px;
+    }
+
+    &-new {
+        color: white;
+        margin-top: 100px;
+        font-weight: 300;
+        font-size: 1.5rem;
+        padding: 5px 7px;
+        border-radius: 15px;
+        display: inline-flex;
+        background: rgba(0,0,140,.08);
+        cursor: pointer;
+    
+
+        span {
+            background-color: $green-light;
+            padding: 0 7px;
+            border-radius: 15px;        
+            margin-left: 3px;
+        }
+    }
+
+    &-paragraph {
+        margin-top: 25px;
+
+        &-title {
+            font-size: 4rem;
+            font-weight: 300;
+            color: white;
+            margin: 10px 0;
+        }
+
+        &-text {
+            font-size: 1.8rem;
+            color: white;
+            margin: 10px 0;
+            max-width: 600px;
+        }
+    }
+
+    &-buttons {
+        display: flex;
+        margin-top: 30px;
+        margin-bottom: 500px;
+
+        &-left {
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.95);
+            font-size: 1.7rem;
+            padding: 8px 25px;
+            color: rgba(77, 77, 77, 0.753);
+            border-radius: 5px;
+            transition: .5s;
+
+            &:hover {
+                box-shadow: 1px 1px 7px rgb(39, 39, 39);
+            }   
+        }
+        
+        &-right {
+            margin: 10px 0;
+            background-color: $green-light;
+            font-size: 1.7rem;
+            padding: 8px 25px;
+            color: white;
+            border-radius: 5px;
+            transition: .5s;
+
+            &:hover {
+                box-shadow: 1px 1px 7px rgb(39, 39, 39);
+            }   
+        }
+    }
+}
+
+#Link {
+    text-decoration: none
+}

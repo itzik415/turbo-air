@@ -1,0 +1,8 @@
+.header {
+    background: linear-gradient(270deg, rgba(2,0,36,0.3) 0%, rgba(126,126,126,0.3) 37%, rgba(255,255,255,0.3) 100%) , url('https://storage.googleapis.com/turboair-israel/general-images/kitchen-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 65%);
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 65%);
+    height: 100%;
+}

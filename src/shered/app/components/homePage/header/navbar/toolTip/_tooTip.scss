@@ -1,0 +1,27 @@
+
+.tooltip {
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    top: 55px;
+    transform: rotateX(-90deg);
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: top;
+    color: black;
+    right: 0;
+    transition: .3s;
+    font-size: 2rem;
+
+    &-cube {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        left: 46%;
+        position: absolute;
+        top: -6px;
+        transform: rotate(45deg);
+        z-index: -1;
+
+    }
+}

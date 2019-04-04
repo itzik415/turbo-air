@@ -1,0 +1,16 @@
+//Basic imports
+@import './Scss/base';
+@import './Scss/animations';
+@import './Scss/variables';
+
+
+//Home page
+@import './components/homePage/_homePage';
+@import './components/homePage/header/_header';
+@import './components/homePage/header/mainContent/_mainContent';
+@import './components/homePage/header/navbar/_navbar';
+@import './components/homePage/header/navbar/hamburger/_hamburger';
+@import './components/homePage/header/navbar/toolTip/_tooTip';
+
+//Company about
+@import './components/homePage/brandAbout/_brandAbout';
