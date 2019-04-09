@@ -1,25 +1,16 @@
 import React from 'react';
 import { hydrate } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux'
+import { store } from '../shered/app/Redux/store'
 import Main from '../shered/app/main';
 import '../shered/app/main.scss';
 
 hydrate (
-    <BrowserRouter>
-        <Main />
-    </BrowserRouter>,
+    <Provider store={store}>
+        <BrowserRouter>
+            <Main />
+        </BrowserRouter>
+    </Provider>,
     document.getElementById('root')
 );
-
-
-
-// import { Provider } from 'react-redux';
-// import './main.scss';
-// import { store } from './Redux/store';
-
-// ReactDOM.render(
-//     <Provider store={store}>
-//         <Main />
-//     </Provider>, 
-//     document.getElementById('root')
-// );

@@ -1,0 +1,45 @@
+.storeDetails {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and(max-width: 900px){
+        width: 45%;
+    }
+
+    @media screen and(max-width: 600px){
+        width: 100%;
+    }
+
+    &-title {
+        font-size: 2rem;
+        text-align: start;
+
+        @media screen and(max-width: 600px){
+            text-align: center;
+        }
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        flex: 1;
+
+        @media screen and(max-width: 600px){
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.7rem;
+            margin-top: 10px;
+            color: rgb(95, 95, 95);
+        }
+        
+        p span {
+            color: black;
+            font-size: 2rem;
+        }
+
+    }
+}
+

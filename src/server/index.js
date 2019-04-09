@@ -3,8 +3,11 @@ import React from "react"
 
 import express from "express"
 import cors from "cors"
-
+import { rootReducer } from '../shered/app/Redux/reducer'
+import thunk from "redux-thunk"
 import { renderToString } from "react-dom/server"
+import { Provider } from 'react-redux'
+import {createStore, applyMiddleware, compose} from 'redux'
 import serialize from "serialize-javascript"
 import { matchPath, StaticRouter } from 'react-router-dom'
 import Main from '../shered/app/main'
@@ -18,6 +21,8 @@ app.use(express.static('public')) // make everything in the public folder availa
 
 app.get('*', (req, res, next) => {
     const activeRoute = routes.find((route) => matchPath(req.url, route)) || {}
+    const store = createStore(rootReducer, applyMiddleware(thunk));
+    const preloadedState = store.getState();
 
     const promise = activeRoute.fetchInitialData ? 
         activeRoute.fetchInitialData(req.path): 
@@ -26,9 +31,11 @@ app.get('*', (req, res, next) => {
     promise.then((data) => {
         const context = { data }
         const markup = renderToString(
-            <StaticRouter location={req.url} context={context}>
-                <Main />    
-            </StaticRouter>
+            <Provider store={store}>
+                <StaticRouter location={req.url} context={context}>
+                    <Main />    
+                </StaticRouter>
+            </Provider>
         )
     
         res.send(`
@@ -39,13 +46,17 @@ app.get('*', (req, res, next) => {
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <meta http-equiv="X-UA-Compatible" content="ie=edge">
                     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
+                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
                     <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
                     <script src='/bundle.js' defer></script>
                     <script>window.__INITIAL_DATA__ = ${serialize(data)}</script>
-                    <title>SSR</title>
+                    
+                    <title>TurboAir</title>
                 </head>
                 <body>
                     <div id="root">${markup}</div>
+                    <script>window._PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}</script>
+                    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
                 </body>
             </html>
         `)

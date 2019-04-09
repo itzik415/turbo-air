@@ -34,13 +34,17 @@
             font-weight: 300;
             color: white;
             margin: 10px 0;
+            text-shadow: 1px 3px 3px black;
         }
-
+        
         &-text {
             font-size: 1.8rem;
             color: white;
             margin: 10px 0;
             max-width: 600px;
+            text-shadow: 1px 3px 3px black;
+            line-height: 30px;
+            letter-spacing: 1px;
         }
     }
 

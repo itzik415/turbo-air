@@ -11,6 +11,24 @@
 @import './components/homePage/header/navbar/_navbar';
 @import './components/homePage/header/navbar/hamburger/_hamburger';
 @import './components/homePage/header/navbar/toolTip/_tooTip';
+@import './components/homePage/footer/_footer';
+@import './components/homePage/products/_products';
+@import './components/homePage/brandAbout/_brandAbout';
+@import './components/homePage/learnMore/_learnMore';
 
 //Company about
-@import './components/homePage/brandAbout/_brandAbout';
+@import './components/About/About';
+
+//Authorized stores
+@import './components/authorizedStoresPage/_authorizedStoresPage';
+
+//Service locations
+@import './components/serviceLocationsPage/_ServiceLocationsPage';
+
+//Service locations
+@import './components/contactPage/_contactPage';
+@import './components/contactPage/contact/_contact';
+@import './components/contactPage/officeDetails/_officeDetails';
+@import './components/contactPage/storeDetails/_storeDetails';
+
+

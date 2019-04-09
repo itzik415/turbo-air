@@ -1,0 +1,93 @@
+.contactPage {
+    margin: 0 auto -60rem auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 400px;
+
+    @media screen and(max-width: 900px) {
+        padding-bottom: 600px;   
+    }
+
+    @media screen and(max-width: 600px) {
+        padding-bottom: 700px;   
+    }
+
+    
+    &-top {
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 91%, 0 57%);
+        clip-path: polygon(0 0, 100% 0%, 100% 91%, 0 57%);
+        z-index: 100;
+        background: -webkit-linear-gradient(to top, rgb(226, 226, 226), #86A8E7, #7F7FD5); 
+        background: linear-gradient(to top, rgb(226, 226, 226), #86A8E7, #7F7FD5);
+        margin-bottom: -590px;
+        padding-bottom: 700px;  
+
+        @media screen and(max-width: 900px) {
+            -webkit-clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 68%);
+            clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 68%);
+            padding-bottom: 1400px; 
+            margin-bottom: -1000px;
+        }
+        
+        &-title {
+            text-align: center;
+            font-size: 4rem;
+            font-weight: 300;
+            margin: -9rem 0 1rem 0;
+            padding-top: 21rem;
+            padding-bottom: 20rem;
+        }
+        
+        &-second {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 300;
+            color: rgb(95, 95, 95);
+            margin: -18rem 0 3rem 0;
+
+            @media screen and(max-width: 600px) {
+                font-size: 2rem;
+                padding: 0 20px;
+            }
+        }
+    }
+    
+
+    &-main {
+        margin: 1rem auto;
+        position: absolute;
+        z-index: 100000;
+        right: 0;
+        left: 0;
+        top: 330px;
+        max-width: 1200px;
+        display: flex;
+
+        @media screen and(max-width: 1300px) {
+            padding: 20px;
+        }
+
+        @media screen and(max-width: 900px) {
+            flex-direction: column;
+            
+        }
+
+        &-location {
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+
+            @media screen and(max-width: 900px) {
+                flex-direction: row;
+                justify-content: space-between;
+                padding-bottom: 300px;
+            }
+
+            @media screen and(max-width: 600px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+        }
+    }
+}
