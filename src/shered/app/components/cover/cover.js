@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { onClickCloseSearch } from '../../Redux/actions/searchFiled';
 
 const cover = (props) => {
-    console.log(props)
     return (
         <div className="bodyCover" onClick={props.click} style={{display: props.display}}></div>
     );

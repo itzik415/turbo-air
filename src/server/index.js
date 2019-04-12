@@ -1,4 +1,3 @@
-
 import React from "react"
 
 import express from "express"
@@ -23,7 +22,6 @@ app.get('*', (req, res, next) => {
     const activeRoute = routes.find((route) => matchPath(req.url, route)) || {}
     const store = createStore(mainReducer, applyMiddleware(thunk));
     const preloadedState = store.getState();
-    console.log(preloadedState)
     const promise = activeRoute.fetchInitialData ? 
         activeRoute.fetchInitialData(req.path): 
         Promise.resolve()

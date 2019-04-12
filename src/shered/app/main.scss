@@ -3,6 +3,8 @@
 @import './Scss/animations';
 @import './Scss/variables';
 
+@import "./components/homePage/learnMore/slick/_slick";
+// @import "./Scss/slik/slik-theme";
 
 //Home page
 @import './components/homePage/_homePage';
@@ -37,5 +39,3 @@
 @import './components/contactPage/contact/_contact';
 @import './components/contactPage/officeDetails/_officeDetails';
 @import './components/contactPage/storeDetails/_storeDetails';
-
-

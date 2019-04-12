@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const searchModal = (props) => {
-    console.log(props)
     return (
         <div className="searchModal" style={{visibility: props.visibility, opacity: props.opacity,transform: props.translate}}>
             <input name="searchModal-search" placeholder="חיפוש..." type="text" />

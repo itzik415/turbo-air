@@ -18,7 +18,7 @@ class navbar extends Component {
 
   onMouseEnter(e) {
     if(e.target.id === 'nav-1') this.setState({translate: 'translateX(105px)'})
-    if(e.target.id === 'nav-2') this.setState({translate: 'translateX(-70px)'})
+    if(e.target.id === 'nav-2') this.setState({translate: 'translateX(47px)'})
     if(e.target.id === 'nav-3') this.setState({translate: 'translateX(-135px)'})
     if(e.target.id === 'nav-4') this.setState({translate: 'translateX(-270px)'})
     this.setState({visibility: 'visible', opacity: '1'})
@@ -35,7 +35,7 @@ class navbar extends Component {
       transition: this.state.transition,
       opacity: this.state.opacity
     }
-    // console.log(this)
+
     return (
       <div className="navbar">  
           <div className="navbar__inner">
@@ -48,14 +48,14 @@ class navbar extends Component {
                   <span className="navbar__inner-right-drop-quantity">0</span>
                   <ion-icon name="cart" id="cart"></ion-icon>
                 </p>
-                <p onClick={() => this.onClickSearch()} className="navbar__inner-right-drop" style={{transform: this.props.transformScale2}}>
+                <p className="navbar__inner-right-drop" style={{transform: this.props.transformScale2}}>
                   <ion-icon name="close" id="close"></ion-icon>
                 </p>
             </div>
             <div className="navbar__inner-middle" onMouseLeave={(e) => this.onMouseLeave(e)}>
                 <div onMouseEnter={(e) => this.onMouseEnter(e)} style={{transform: this.props.transformScale}} id="nav-1" className="navbar__inner-middle-drop">אודותינו</div>
                 <div onMouseEnter={(e) => this.onMouseEnter(e)} style={{transform: this.props.transformScale}} id="nav-2" className="navbar__inner-middle-drop">מידע נוסף</div>
-                <div onMouseEnter={(e) => this.onMouseEnter(e)} style={{transform: this.props.transformScale}} id="nav-3" className="navbar__inner-middle-drop">מוצרים</div>
+                <div onMouseEnter={(e) => this.onMouseEnter(e)} style={{transform: this.props.transformScale}} id="nav-3" className="navbar__inner-middle-drop"><Link to="/products" id="Link">מוצרים</Link></div>
                 <div onMouseEnter={(e) => this.onMouseEnter(e)} style={{transform: this.props.transformScale}} id="nav-4" className="navbar__inner-middle-drop">תמיכה</div>
                 <ToolTip translateValue={style3} onMouseLeave={(e) => this.onMouseLeave(e)}/>
             </div>

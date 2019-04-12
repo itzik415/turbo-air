@@ -13,7 +13,8 @@ const browserConfig = {
         rules: [
             { test: /\.(js)$/, use: 'babel-loader' },
             { test: /\.(jpe?g|png|gif|svg)$/i, loader: "file-loader" },
-            { test: /\.(s*)css$/, use: [ 'style-loader', 'css-loader', 'sass-loader' ]}
+            { test: /\.(s*)css$/, use: [ 'style-loader', 'css-loader', 'sass-loader' ]},
+            { test: /\.(ttf|eot|svg|gif|png)(\?v=[0-9]\.[0-9]\.[0-9])?$/, use: ['file-loader' ]}
         ]
     },
     mode: 'development',

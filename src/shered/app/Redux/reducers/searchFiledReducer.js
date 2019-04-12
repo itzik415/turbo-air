@@ -22,12 +22,12 @@ export const searchFiledReducer = (state = initialState, action) => {
         case 'CLOSE_SEARCH':
             return {
                 ...state, 
-                transform0: action.transform0, 
-                transform1: action.transform1, 
-                display: action.display, 
-                visibility: action.visibility, 
-                opacity: action.opacity, 
-                translate: action.translate
+                transform0: 'scale(1)', 
+                transform1: 'scale(0)', 
+                display: 'none', 
+                visibility: 'hidden', 
+                opacity: '0', 
+                translate: 'translateY(0px)'
             }
         default:
             return state;

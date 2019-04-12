@@ -1,17 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Carousel from './slick/slick';
 
 const learnMore = () => {
     return (
         <div className="learnMore">
-            <Link id="Link" to="/authorized-stores"><div className="learnMore-stores">
-                <p className="learnMore-stores-name">א.ל.מ</p>
-                <p className="learnMore-stores-name">טרקלין</p>
-                <p className="learnMore-stores-name">יאקב</p>
-                <p className="learnMore-stores-name">אבי סופר</p>
-                <p className="learnMore-stores-name">ליאור</p>
-                <p className="learnMore-stores-name">אור ישר</p>
-            </div></Link>
+            <Carousel/>
             <div className="learnMore-middle">
                 <div className="learnMore-middle-right">
                     <p className="learnMore-middle-right-img"><ion-icon name="logo-buffer" id="box-icon1"></ion-icon></p>

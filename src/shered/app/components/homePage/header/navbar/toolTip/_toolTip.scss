@@ -25,7 +25,10 @@
     }
 
     &-first,
-    &-second {
+    &-second,
+    &-third,
+    &-fourth,
+    &-fifth {
         display: flex;
         align-items: center;
         padding: 3rem 5.5rem;
@@ -67,7 +70,7 @@
     }
 }
 
-.fas {
+#toolTip-icons {
     font-size: 40px;
     margin-left: 10px;
 }
