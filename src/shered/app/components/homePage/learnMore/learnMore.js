@@ -4,15 +4,14 @@ import { Link } from 'react-router-dom'
 const learnMore = () => {
     return (
         <div className="learnMore">
-            <div className="learnMore-stores">
+            <Link id="Link" to="/authorized-stores"><div className="learnMore-stores">
                 <p className="learnMore-stores-name">א.ל.מ</p>
                 <p className="learnMore-stores-name">טרקלין</p>
                 <p className="learnMore-stores-name">יאקב</p>
                 <p className="learnMore-stores-name">אבי סופר</p>
                 <p className="learnMore-stores-name">ליאור</p>
                 <p className="learnMore-stores-name">אור ישר</p>
-            </div>
-            <button className="learnMore-btn">לרשימת החנויות המלאה</button>
+            </div></Link>
             <div className="learnMore-middle">
                 <div className="learnMore-middle-right">
                     <p className="learnMore-middle-right-img"><ion-icon name="logo-buffer" id="box-icon1"></ion-icon></p>

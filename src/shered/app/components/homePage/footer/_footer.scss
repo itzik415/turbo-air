@@ -24,17 +24,12 @@
         display: flex;
         padding: 15rem 0 20rem 0;
 
-        @media screen and (max-width: 1440px) {
-            justify-content: space-around;
-        }
-
         @media screen and(max-width: 1300px) {
             padding: 15rem 20px 20rem 20px;
         }
     
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 600px) {
             flex-direction: column;
-            align-items: center;
             padding: 5rem 20px 5rem 20px;
         }
 
@@ -44,145 +39,64 @@
             flex-direction: column;
             text-align: start;
             width: 100%;
-
-            @media screen and (max-width: 700px) {
-                text-align: center;
+            
+            @media screen and (max-width: 600px) {
+                align-items: center;
                 margin: 20px 0;
             }
 
             &-title {
-                font-size: 2.5rem;
+                font-size: 1.7rem;
                 font-weight: 600;
                 color: grey;
             }
 
             p {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
                 font-weight: 300;
-                text-align: start;
-                margin-top: 1.5rem;
+                margin-top: 1rem;
                 color: grey;
-
-                @media screen and (max-width: 700px) {
-                    text-align: center;
-                }
+                display: flex;
+                align-items: center;
             }
         }
-
-        &-socialMedia {
-            display: flex;
-            flex-direction: column;
-            text-align: start;
-            width: 100%;
-
-            @media screen and (max-width: 700px) {
-                text-align: center;
-                margin: 20px 0;
-            }
-
-            &-title {
-                font-size: 2.5rem;
-                font-weight: 600;
-                color: grey;
-            }
-
-            &-div {
-
-                @media screen and (max-width: 700px) {
-                    text-align: center;
-                }
-
-                a {
-                    font-size: 3rem;
-                    text-align: center;
-                    width: 45px;
-                    height: 45px;
-                    background-color: $main-color;
-                    border-radius: 50%;
-                    padding: 7px 2px;
-                    margin-left: 13px;
-                    margin-top: 5px;
-                    color: white;
-                    text-decoration: none;
-                    transition: .3s;
-
-                    @media screen and (max-width: 620px) {
-                        min-width: 45px;
-                        height: 45px;
-                    }
-
-                    &:last-child {
-                        @media screen and (max-width: 620px) {
-                            margin-left: 0;
-                        }
-                    }
-
-                    &:hover {
-                        cursor: pointer;
-                        box-shadow: 1px 5px 10px gray;
-                        transform: scale(1.1);
-                        text-decoration: none;
-        
-                        &:first-child {
-                            background: #337ab7;
-                        }
-                        
-                        &:nth-child(2) {
-                            background: #cc2366 ;
-                            // background: linear-gradient(#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-                        }
-
-                        
-                        &:nth-child(3) {
-                            background: #38A1F3;
-                        }
-
-                        &:last-child {
-                            background: #BD081C
-                            ;
-                        }
-                    }
-
-                }
-                
-            }
-        }
-
+            
         &-websites {
             display: flex;
             flex-direction: column;
             text-align: start;
             width: 100%;
 
-            @media screen and (max-width: 700px) {
+            @media screen and (max-width: 600px) {
                 text-align: center;
                 margin: 20px 0;
             }
 
             &-title {
-                font-size: 2.5rem;
+                font-size: 1.7rem;
                 font-weight: 600;
                 color: grey;
 
-                @media screen and (max-width: 700px) {
+                @media screen and (max-width: 600px) {
                     text-align: center;
                 }
             }
 
             &-brandName {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
                 font-weight: 300;
                 text-align: start;
-                margin-top: 1.5rem;
+                margin-top: 1rem;
                 text-decoration: none;
                 color: grey;
-
-                @media screen and (max-width: 700px) {
+                
+                @media screen and (max-width: 600px) {
                     text-align: center;
                 }
-
+                
                 &:hover {
                     color: $purple-light;
+                    text-decoration: none;
                 }
             }
         }
@@ -193,45 +107,28 @@
             text-align: start;
             width: 100%;
 
-            @media screen and (max-width: 700px) {
+            @media screen and (max-width: 600px) {
                 text-align: center;
                 margin: 20px 0;
             }
 
             &-title {
-                font-size: 2.5rem;
+                font-size: 1.7rem;
                 font-weight: 600;
                 color: grey;
             }
 
             p {
                 color: grey;
-                font-size: 1.8rem;
+                font-size: 1.5rem;
                 transition: .3s;
-                margin-top: 1.5rem;
+                margin-top: 1rem;
                 text-decoration: none;
 
                 &:hover {
                     color: $purple-light;
                 }
             }
-        }
-    }
-
-    &-copyright {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        color: white;
-        font-size: 1.6rem;
-        font-weight: 100;
-        margin: 0;
-        letter-spacing: 1px;
-        background-color: rgba(128, 128, 128, 0.356);
-        padding: 20px 0;
-
-        @media screen and(max-width: 700px) {
-            font-size: 1.2rem;
         }
     }
 }

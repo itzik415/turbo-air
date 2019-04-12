@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FooterBottom from './footerBottom/footerBottom';
 
 const footer = () => {
     return (
@@ -25,24 +26,14 @@ const footer = () => {
                     <a className="footer__section-websites-brandName" rel="noopener noreferrer" href="http://www.ufesa.co.il" target="_blank">ufesa.co.il</a>
                     <a className="footer__section-websites-brandName" rel="noopener noreferrer" href="http://www.boohr.co.il" target="_blank">Boohr.co.il</a>
                 </div>
-                {/* <div className="footer__section-socialMedia">
-                    <h1 className="footer__section-socialMedia-title">מוזמנים לבקר</h1>
-                    <div className="footer__section-socialMedia-div">
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/HamiltonBeach" className="fab fa-facebook-f"><p></p></a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/hamiltonbeach/" className="fab fa-instagram"><p></p></a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/HamiltonBeach" className="fab fa-twitter"><p></p></a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.pinterest.com/hamiltonbeach/" className="fab fa-pinterest-p"><p></p></a>
-                    </div>
-                </div> */}
                 <div className="footer__section-companyDetails">
                     <h1 className="footer__section-companyDetails-title">מידע נוסף</h1>
-                    <p className="footer__section-companyDetails-phone">טלפון: 09-7409835/6</p>
-                    <p className="footer__section-companyDetails-address">כתובת: הרימון 3 אבן יהודה</p>
-                    <p className="footer__section-companyDetails-email">דואר אלקטרוני: sherut@shaoulian.co.il</p>
-                    <p className="footer__section-companyDetails-workingHours">שעות פעילות: א׳ - ה׳ בין השעות 9:00-17:00</p>
+                    <p className="footer__section-companyDetails-phone"><ion-icon id="footer-details-icon" name="call"></ion-icon> 09-7409835/6</p>
+                    <p className="footer__section-companyDetails-address"><ion-icon id="footer-details-icon" name="map"></ion-icon> הרימון 3, אבן יהודה, ישראל</p>
+                    <p className="footer__section-companyDetails-email"><ion-icon id="footer-details-icon" name="mail"></ion-icon> sherut@shaoulian.co.il</p>
+                    <p className="footer__section-companyDetails-workingHours"><ion-icon id="footer-details-icon" name="time"></ion-icon> א׳ - ה׳ בין השעות 9:00-17:00</p>
                 </div>
             </div>
-            <p className="footer-copyright">כל הזכויות שמורות לחברת שאוליאן סחר בע״מ 2019 ©</p>
         </div>
     )
 }

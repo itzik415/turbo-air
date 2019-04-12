@@ -26,15 +26,16 @@
     }
 }
 
-// @keyframes moveLeft {
-//     0% {
-//         width: 0;
-//     }
-//     100% {
-//         width: 330px;
-//         border-bottom: 1px solid $yellow;
-//     }
-// }
+@keyframes moveLeft {
+    0% {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 @keyframes makeItBig {
     0% {

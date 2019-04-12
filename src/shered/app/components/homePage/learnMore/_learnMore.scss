@@ -6,26 +6,22 @@
     position: absolute;
     z-index: 10000;
 
-    
-
     &-stores {
+        position: relative;
         display: flex;
         max-width: 1200px;
-        margin: 1rem  auto 10rem auto;
+        padding: 3rem 0 7rem 0;
+        margin: 0 auto;
         justify-content: space-around;
         transition: .3s;
         cursor: pointer;
-
-        &:hover {
-            filter: blur(3px);
-            transform: scale(0.9);
-        }
 
         &-name {
             font-size: 2rem;
             color: grey;
             font-weight: 500;
         }
+
     }
 
     &-middle {
@@ -37,6 +33,7 @@
         &-left,
         &-right {
             background-color: white;
+            text-align: start;
             border-radius: 5px;
             box-shadow: 1px 1px 10px rgba(160, 160, 160, 0.822);
             width: 47%;
@@ -91,6 +88,7 @@
 
         &-right {
             width: 40%;
+            text-align: start;
 
             &-title {
                 font-size: 4rem;
@@ -107,6 +105,7 @@
             width: 40%;
             display: flex;
             align-items: center;
+            justify-content: flex-start;
 
             &-btn {
                 font-size: 1.7rem;
@@ -121,6 +120,7 @@
                 &:hover {
                     transform: translateY(-3px);
                     box-shadow: 1px 5px 8px rgba(160, 160, 160, 0.822);
+                    color: white;
                 }
             }
         }

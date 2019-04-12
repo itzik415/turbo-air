@@ -1,0 +1,29 @@
+.searchModal {
+    padding: 0;
+    display: flex;
+    border: 2px solid black;
+    position: absolute;
+    left: 34%;
+    right: 34%;
+    top: -70px;
+    z-index: 10000000;
+    transition: .3s;
+    
+    input {
+        border: none;
+        z-index: 10000000;
+        width: 100%;
+        padding: 1rem;
+        font-size: 2rem;
+        outline: none;
+    }
+}
+
+
+#search2 {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    font-size: 60px;
+    outline: noen;
+}

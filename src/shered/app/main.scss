@@ -10,14 +10,21 @@
 @import './components/homePage/header/mainContent/_mainContent';
 @import './components/homePage/header/navbar/_navbar';
 @import './components/homePage/header/navbar/hamburger/_hamburger';
-@import './components/homePage/header/navbar/toolTip/_tooTip';
+//Tool tips
+@import './components/homePage/header/navbar/toolTip/_toolTip';
+
 @import './components/homePage/footer/_footer';
+@import './components/homePage/footer/footerBottom/_footerBottom';
 @import './components/homePage/products/_products';
 @import './components/homePage/brandAbout/_brandAbout';
 @import './components/homePage/learnMore/_learnMore';
 
 //Company about
 @import './components/About/About';
+
+//Body cover
+@import './components/cover/cover';
+@import './components/homePage/header/navbar/modal/_modal';
 
 //Authorized stores
 @import './components/authorizedStoresPage/_authorizedStoresPage';

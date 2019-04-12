@@ -3,7 +3,7 @@ export const initialState = {
     serviceLocationsList: [],
 }
 
-export const rootReducer = (state = initialState, action) => {
+export const storesReducer = (state = initialState, action) => {
     switch(action.type) {
         case 'RECIVE_AUTHORIZED_SELLERS':
             return {

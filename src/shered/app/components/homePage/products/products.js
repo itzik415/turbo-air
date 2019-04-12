@@ -95,7 +95,7 @@ const productsSection = () => {
                 </div>
             </div>
             {/* <button className="products-btn">לכל המוצרים</button> */}
-            <Link to="/products" className="products-glowing-button">לכל המוצרים</Link> 
+            <Link to="/products" id="Link" className="products-glowing-button">לכל המוצרים</Link> 
         </div>
     )
 }
