@@ -1,0 +1,52 @@
+.help {
+    padding: 20px 0;
+    width: 100%;
+    background: #f6f9fc;
+
+    &__section {
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0rem auto;
+
+        &-right {
+            width: 47%;
+            text-align: start;
+    
+            &-title {
+                font-size: 4rem;
+                color: $purple-light;
+            }
+    
+            &-text {
+                font-size: 2rem;
+                color: grey;
+            }
+        }
+    
+        &-left {
+            width: 47%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+    
+            &-btn {
+                font-size: 1.7rem;
+                padding: 1rem 4rem;
+                border-radius: 5px;
+                transition: .3s;
+                background-color: $purple-light;
+                border: 1px solid $purple-light;
+                color: white;
+                cursor: pointer;
+    
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 1px 5px 8px rgba(160, 160, 160, 0.822);
+                    color: white;
+                }
+            }
+        }
+    }
+
+}

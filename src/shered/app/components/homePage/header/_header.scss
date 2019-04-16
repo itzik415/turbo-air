@@ -1,10 +1,73 @@
 .header {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 5%, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0.3) 40%, rgba(255,255,255,0.2) 70%,rgba(255, 255, 255, 1) 100%) , url('https://www.odsavace-online.sk/fotky27881/fotos/27881_1537__vyrp12_1536Turboair-sofia-60-1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
-    height: 100%;
+    background: #f6f9fc;
+    background: linear-gradient(191deg, rgba(255, 164, 213, 0.2) 71%, #f6f9fc 29%);
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        opacity: 0.9;
+    }
+
+    .stripes {
+        top: 0;
+        grid: repeat(5,200px)/repeat(10,1fr);
+        -webkit-transform-origin: 0;
+        transform-origin: 0;
+        background: linear-gradient(#507eb1,#709dc7 10%,#dde9f5 38%,#eaf2f9 48%,#f6f9fc 62%, #e2e2e24b 100%);
+    }
+    
+    .stripes {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        display: grid;
+        top: -380px;
+        -webkit-transform: skewY(11deg);
+        transform: skewY(11deg);
+    }
+    
+    .stripes :first-child {
+        grid-column: span 3;
+        background: linear-gradient(100grad,rgba(243,251,255,.4),rgba(243,251,255,.15) 20%,rgba(243,251,255,0));
+    }
+    
+    @media screen and(min-width: 670px) {
+        .stripes :nth-child(2) {
+            background: linear-gradient(100grad,rgba(0,119,204,0),rgba(0,119,204,.05) 40%,rgba(0,119,204,.35));
+        }
+    }
+    
+    .stripes :nth-child(2) {
+        grid-area: 3/span 3/auto/-1;
+    }
+
+   
+    
+    @media screen and(min-width: 670px) {
+        .stripes :nth-child(3) {
+            background: linear-gradient(100grad,#fff 50%,hsla(0, 0%, 100%, 0));
+        }
+    }
+    
+    .stripes :nth-child(3) {
+        grid-row: 4;
+        grid-column: span 5;
+    }
+    
+    @media screen and(min-width: 670px) {
+        .stripes :nth-child(4) {
+            background: linear-gradient(100grad,rgba(0,119,204,0) 10%,rgba(0,119,204,.05));
+        }
+    }
+
+    .stripes :nth-child(4) {
+        grid-area: 4/span 11/auto/-1;
+    }
+    
+    .stripes :nth-child(5) {
+        grid-area: auto/-6/-1/1;
+        background: linear-gradient(100grad,#e5f1ff 20% ,#e2f1ff 80%);
+    }
 }

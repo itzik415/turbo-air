@@ -18,7 +18,7 @@
     &-title {
         font-size: 2rem;
         text-align: start;
-        color: white;
+        color: $title;
 
         @media screen and(max-width: 600px){
             text-align: center;
@@ -38,12 +38,12 @@
         p {
             font-size: 1.7rem;
             margin-top: 10px;
-            color: white;
+            color: $title;
         }
         
         p span {
             font-size: 2rem;
-            color: white;
+            color: $title;
         }
 
     }

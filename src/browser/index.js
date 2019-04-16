@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux'
 import { store } from '../shered/app/Redux/store'
 import Main from '../shered/app/main';
-import '../shered/app/main.scss';
+import '../shered/app/Scss/main.scss';
 
 hydrate (
     <Provider store={store}>

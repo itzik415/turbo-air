@@ -32,7 +32,14 @@ const about = () => {
                     <p className="about-main-middle-paragraph">מתן שירות אמין וזמין זה עיקרון חשוב במעלה ראשונה בחברת שאוליאן.</p>
                 </div>
             </div>
-            <span id="squre-1"></span>
+            <div className="stripes">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            {/* <span id="squre-1"></span>
             <span id="squre-2"></span>
             <span id="squre-3"></span>
             <span id="squre-4"></span>
@@ -40,7 +47,8 @@ const about = () => {
             <span id="squre-6"></span>
             <span id="squre-7"></span>
             <span id="squre-8"></span>
-            <span id="squre-9"></span>
+            <span id="squre-9"></span> */}
+            
         </div>
     )
 }

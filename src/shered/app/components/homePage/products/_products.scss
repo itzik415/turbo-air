@@ -1,19 +1,16 @@
 .products {
     height: 100%;
     background-color: white;
-    -webkit-clip-path: polygon(0 25%, 100% 40%, 100% 100%, 0% 100%);
-    clip-path: polygon(0 25%, 100% 40%, 100% 100%, 0% 100%);
     width: 100%;
-
+    padding-top: 100px;
+    
     @media screen and(max-width: 1300px) {
-        padding: 0 20px;
+        padding: 100px 20px 0 20px;
     }
 
     &-title {
-        margin-top: -700px;
-        margin-bottom: 70px;
         text-align: center;
-        padding-top: 600px;
+        margin-bottom: 50px;
         font-size: 4rem;
         font-weight: 400;
         color: grey;
@@ -25,7 +22,6 @@
     
     &__section {
         margin: 0 auto;
-        padding-bottom: 100px;
         max-width: 1200px;
         height: 100%;
         display: flex;
@@ -35,6 +31,7 @@
             //FUNCTUNALITY
             width: 30%;
             margin-left: auto;
+            margin-bottom: 100px;
             perspective: 150rem;
             -moz-perspective: 150rem;
             position: relative;
@@ -65,7 +62,7 @@
                     transform: rotateY(180deg);
         
                     &-1 {
-                        background-image: linear-gradient(to right bottom, $orange-light, $orange);
+                        background-image: linear-gradient(to right bottom, $blue-light, $blue-dark);
                     }
         
                     &-2 {
@@ -73,7 +70,7 @@
                     }
         
                     &-3 {
-                        background-image: linear-gradient(to right bottom, $purple-light, $purple);
+                        background-image: linear-gradient(to right bottom, $turquoise, $turquoise-light);
                     }
                 }
         

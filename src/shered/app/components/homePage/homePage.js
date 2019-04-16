@@ -13,7 +13,6 @@ class HomePage extends Component {
                 <BrandAbout />
                 <Products />
                 <LearnMore />
-                <Footer />
             </div>
         )
     }

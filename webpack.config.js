@@ -5,9 +5,9 @@ const nodeExternals = require('webpack-node-externals');
 const browserConfig = {
     entry: './src/browser/index.js', // Where the app starts
     output: {
-        path: path.resolve(__dirname, 'public'), // creating a folder name dist in the courent directory
-        filename: 'bundle.js', // a file that will be create inside the dist folder
-        publicPath: '/'
+        path: path.resolve(__dirname, 'public'), // creating a folder name public in the courent directory
+        filename: 'bundle.js', // a file that will be create inside the public folder
+        publicPath: "/public"
     },
     module: {
         rules: [
@@ -16,6 +16,10 @@ const browserConfig = {
             { test: /\.(s*)css$/, use: [ 'style-loader', 'css-loader', 'sass-loader' ]},
             { test: /\.(ttf|eot|svg|gif|png)(\?v=[0-9]\.[0-9]\.[0-9])?$/, use: ['file-loader' ]}
         ]
+    },
+    watchOptions: {
+      poll: true,
+      ignored: /node_modules/
     },
     mode: 'development',
     plugins: [

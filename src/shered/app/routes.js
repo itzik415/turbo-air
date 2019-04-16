@@ -2,7 +2,15 @@ import HomePage from './components/homePage/homePage';
 import Contact from './components/contactPage/contactPage';
 import AuthorizedStores from './components/authorizedStoresPage/authorizedStoresPage';
 import About from './components/about/about';
-import ServiceLocations from './components/serviceLocationsPage/serviceLocationsPage';
+import ProductsPage from './components/ProductsPage/ProductsPage';
+import AboutTurboair from './components/aboutTurboair/aboutTurboair';
+import AirflowPower from './components/airflowPower/airflowPower';
+import Installation from './components/installation/installation';
+import AirflowMethod from './components/airflowMethod/airflowMethod';
+import Filtration from './components/filtration/filtration';
+import Safety from './components/safety/safety';
+
+
 
 const routes = [
     {
@@ -21,14 +29,44 @@ const routes = [
         component: AuthorizedStores
     },
     {
-        path: '/about',
+        path: '/about-shaoulian',
         exact: true,
         component: About
     },
     {
-        path: '/service-locations',
+        path: '/about-turboair',
         exact: true,
-        component: ServiceLocations
+        component: AboutTurboair
+    },
+    {
+        path: '/products',
+        exact: true,
+        component: ProductsPage
+    },
+    {
+        path: '/details/airflow-power',
+        exact: true,
+        component: AirflowPower
+    },
+    {
+        path: '/details/installation',
+        exact: true,
+        component: Installation
+    },
+    {
+        path: '/details/airflow-method',
+        exact: true,
+        component: AirflowMethod
+    },
+    {
+        path: '/details/filtration',
+        exact: true,
+        component: Filtration
+    },
+    {
+        path: '/details/safety',
+        exact: true,
+        component: Safety
     },
     //an example with route with fetching
     // {

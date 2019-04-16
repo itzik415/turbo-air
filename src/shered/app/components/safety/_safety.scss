@@ -1,0 +1,164 @@
+.authorizedSellers {
+
+    &-title {
+        text-align: center;
+        margin: 10rem 0 2rem 0;
+        font-size: 7rem;
+        color: $title;
+    }
+
+    &-paragraph {
+        text-align: center;
+        font-size: 2rem;
+        color: $title;
+    }
+
+    .stripes {
+        top: 0;
+        grid: repeat(4,100px)/repeat(10,1fr);
+        -webkit-transform-origin: 0;
+        transform-origin: 0;
+        background: linear-gradient(#507eb1,#709dc7 10%,#dde9f5 38%,#eaf2f9 48%,#f6f9fc 62%, #e2e2e24b 100%);
+    }
+        
+    .stripes {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        display: grid;
+        top: 0px;
+    }
+        
+    .stripes :first-child {
+        grid-column: span 3;
+        background: linear-gradient(100grad,rgba(243,251,255,.4),rgba(243,251,255,.15) 20%,rgba(243,251,255,0));
+    }
+        
+    @media screen and(min-width: 670px) {
+        .stripes :nth-child(2) {
+            background: linear-gradient(100grad,rgba(0,119,204,0),rgba(0,119,204,.05) 40%,rgba(0,119,204,.35));
+        }
+    }
+        
+    .stripes :nth-child(2) {
+        grid-area: 3/span 3/auto/-1;
+    }
+
+    @media screen and(min-width: 670px) {
+        .stripes :nth-child(3) {
+            background: linear-gradient(100grad,#fff 50%,hsla(0, 0%, 100%, 0));
+        }
+    }
+        
+    .stripes :nth-child(3) {
+        grid-row: 4;
+        grid-column: span 5;
+    }
+        
+    @media screen and(min-width: 670px) {
+        .stripes :nth-child(4) {
+            background: linear-gradient(100grad,rgba(0,119,204,0) 10%,rgba(0,119,204,.05));
+        }
+    }
+    
+    .stripes :nth-child(4) {
+        grid-area: 4/span 11/auto/-1;
+    }
+        
+    .stripes :nth-child(5) {
+        grid-area: auto/-6/-1/1;
+        background: linear-gradient(100grad,#e5f1ff 20% ,#e2f1ff 80%);
+    }
+
+
+    &-main {
+        max-width: 1200px;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-input {
+            position: relative;
+            margin: 2rem 0;
+
+            input {
+                width: 600px;
+                outline: none;
+                padding: 1rem;
+                font-size: 2rem;
+            }
+        }
+    
+        &-para {
+            font-size: 2rem;
+            margin: 2rem 0;
+            font-weight: 300;
+        }
+    
+        &-chart {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 7rem 0 2rem 0;
+    
+            &-header {
+                display: flex;
+                text-align: end;
+                font-size: 1.5rem;
+                font-weight: bolder;
+                align-items: flex-end;
+                
+                h1 {
+                    flex: 1;
+                    border: 1px solid black;
+                    text-align: center;
+                    font-weight: 700;
+                    margin: 0;
+
+                    @media screen and(max-width: 700px) {
+                        font-size: 2rem;
+                    }
+                }
+                
+            }
+            
+            &-line {
+                display: flex;
+                text-align: end;
+                justify-content: space-around;
+    
+                p {
+                    flex: 1;
+                    font-size: 1.8rem;
+                    border: 1px solid black;
+                    text-align: center;
+                    margin: 0;
+
+                    @media screen and(max-width: 700px) {
+                        font-size: 1.4rem;
+                    }
+                }
+                
+            }
+        }
+
+        &-instructions {
+            font-size: 1.5rem;
+            color: $green;
+            font-weight: 300;
+            text-align: center;
+        }
+    }
+
+}
+
+#search-authorized-stores {
+    position: absolute;
+    bottom: 0px;
+    font-size: 40px;
+    left: 0px;
+    background-color: black;
+    color: white;
+    padding: 7px;
+}

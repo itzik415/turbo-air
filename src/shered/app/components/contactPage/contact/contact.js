@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { handleSubmit } from '../../../Redux/action';
+import { handleSubmit } from '../../../Redux/actions/authorizedStores';
 
 const contact = () => {
     return (
@@ -13,7 +13,7 @@ const contact = () => {
                     name="name" 
                     placeholder="ישראל"
                     required/>
-                <label for="first-name" className="contact-firstName-text">שם מלא</label>
+                <label htmlFor="first-name" className="contact-firstName-text">שם מלא</label>
             </div>
             <div className="contact-familyName">
                 <input 
@@ -23,7 +23,7 @@ const contact = () => {
                     name="name" 
                     placeholder="ישראלי"
                     required/>
-                <label for="last-name" className="contact-familyName-text">שם משפחה</label>
+                <label htmlFor="last-name" className="contact-familyName-text">שם משפחה</label>
             </div>
             <div className="contact-email">
                 <input 
@@ -32,7 +32,7 @@ const contact = () => {
                     type="email" 
                     name="email" 
                     placeholder="israel@example.com"/>
-                <label for="email" className="contact-email-text">דואר אלקטרוני</label>
+                <label htmlFor="email" className="contact-email-text">דואר אלקטרוני</label>
             </div>
             <div className="contact-phone">
                 <input 
@@ -42,7 +42,7 @@ const contact = () => {
                     name="phonenumber" 
                     placeholder="0555-555555"
                     required/>
-                <label for="phone" className="contact-phone-text">טלפון</label>
+                <label htmlFor="phone" className="contact-phone-text">טלפון</label>
             </div>
             <div className="contact-textarea">
                 <textarea 
@@ -50,7 +50,7 @@ const contact = () => {
                     id="textarea"  
                     name="message" 
                     required></textarea>
-                <label for="textarea" className="contact-textarea-text">פרטי הפניה<br /><span>אנא נסו לפרט בצורה הטובה ביותר את פרטי הפניה</span></label>
+                <label htmlFor="textarea" className="contact-textarea-text">פרטי הפניה<br /><span>אנא נסו לפרט בצורה הטובה ביותר את פרטי הפניה</span></label>
             </div>
             {/* <div className="contact-message alert alert-success" style={{display: 'none'}}role='alert'>!ההודעה נשלחה בהצלחה</div>
             <div className="contact-message2 alert alert-danger" style={{display: 'none'}}role='alert'>שליחת ההודעה נכלשה</div> */}

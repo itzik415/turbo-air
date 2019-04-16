@@ -2,14 +2,67 @@
     margin: 0 auto auto auto;
     display: flex;
     flex-direction: column;
-    background: 
-    linear-gradient(36deg, #313131 42.34%, transparent 42.34%),
-    linear-gradient(72deg, #FB8F8A 75.48%, transparent 75.48%),
-    linear-gradient(-36deg, #dfdfdf 42.34%, transparent 42.34%) 100% 0, 
-    linear-gradient(-72deg, #1B1F3B 75.48%, transparent 75.48%) 100% 0;
-    // linear-gradient(36deg, #375ABB 42.34%, transparent 42.34%),
-    // linear-gradient(to right, #ffdde1, #ee9ca7),
+    background-color: rgba(226, 226, 226, 0.294);
+    background: rgba(227, 156, 255, 0.5);
+
+    .stripes {
+        top: 0;
+        grid: repeat(5,200px)/repeat(10,1fr);
+        -webkit-transform-origin: 0;
+        transform-origin: 0;
+        background: linear-gradient(#507eb1,#709dc7 10%,#dde9f5 38%,#eaf2f9 48%,#f6f9fc 62%, #e2e2e24b 100%);
+    }
+        
+    .stripes {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        display: grid;
+        top: 0px;
+    }
+        
+    .stripes :first-child {
+        grid-column: span 3;
+        background: linear-gradient(100grad,rgba(243,251,255,.4),rgba(243,251,255,.15) 20%,rgba(243,251,255,0));
+    }
+        
+    @media screen and(min-width: 670px) {
+        .stripes :nth-child(2) {
+            background: linear-gradient(100grad,rgba(0,119,204,0),rgba(0,119,204,.05) 40%,rgba(0,119,204,.35));
+        }
+    }
+        
+    .stripes :nth-child(2) {
+        grid-area: 3/span 3/auto/-1;
+    }
+
+    @media screen and(min-width: 670px) {
+        .stripes :nth-child(3) {
+            background: linear-gradient(100grad,#fff 50%,hsla(0, 0%, 100%, 0));
+        }
+    }
+        
+    .stripes :nth-child(3) {
+        grid-row: 4;
+        grid-column: span 5;
+    }
+        
+    @media screen and(min-width: 670px) {
+        .stripes :nth-child(4) {
+            background: linear-gradient(100grad,rgba(0,119,204,0) 10%,rgba(0,119,204,.05));
+        }
+    }
     
+    .stripes :nth-child(4) {
+        grid-area: 4/span 11/auto/-1;
+    }
+        
+    .stripes :nth-child(5) {
+        grid-area: auto/-6/-1/1;
+        background: linear-gradient(100grad,#e5f1ff 20% ,#e2f1ff 80%);
+    }
+    
+   
     &-top {
         z-index: 100;
         
@@ -18,6 +71,7 @@
             font-size: 4rem;
             font-weight: 500;
             margin-top: 10rem;
+            color: #1d1d5c;
             margin-bottom: 2rem;
         }
         

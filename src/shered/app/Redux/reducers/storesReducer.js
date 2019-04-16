@@ -1,6 +1,5 @@
 export const initialState = {
     authorizedStores: [],
-    serviceLocationsList: [],
 }
 
 export const storesReducer = (state = initialState, action) => {
@@ -9,11 +8,6 @@ export const storesReducer = (state = initialState, action) => {
             return {
                 ...state, 
                 authorizedStores: action.payload,
-            }
-        case 'RECIVE_SERVICE_LOCATIONS':
-            return {
-                ...state, 
-                serviceLocationsList: action.payload,
             }
         default:
             return state;

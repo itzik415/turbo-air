@@ -1,6 +1,10 @@
 .navbar {
     padding-top: 10px;
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     
     &__inner {
         width: 1200px;
@@ -10,7 +14,7 @@
         margin: 0 auto;
         position: relative;
 
-        @media screen and(max-width: 1300px) {
+        @media screen and(max-width: 1200px) {
             padding: 0 20px;
         }
 
@@ -23,7 +27,6 @@
             display: flex;
             font-size: 3.5rem;
             font-weight: 500;
-            justify-content: flex-end;
             width: 35%;
             
             @media screen and(max-width: 600px) {
@@ -88,7 +91,6 @@
                 }
 
                 &:first-child {
-                    // margin-left: auto;
                     padding-left: 10px;
                 }
 

@@ -1,0 +1,57 @@
+//Basic imports
+@import './base/base';
+@import './base/animations';
+@import './base/variables';
+
+@import "../components/homePage/learnMore/slick/_slick";
+
+//Home page
+@import '../components/homePage/_homePage';
+@import '../components/homePage/header/_header';
+
+@import '../components/homePage/header/cube';
+@import '../components/homePage/header/mainContent/_mainContent';
+@import '../components/homePage/header/navbar/_navbar';
+@import '../components/homePage/header/navbar/hamburger/_hamburger';
+//Tool tips
+@import '../components/homePage/header/navbar/toolTip/_toolTip';
+
+@import '../components/homePage/footer/_footer';
+@import '../components/homePage/footer/footerBottom/_footerBottom';
+@import '../components/homePage/products/_products';
+@import '../components/homePage/brandAbout/_brandAbout';
+@import '../components/homePage/learnMore/_learnMore';
+@import '../components/homePage/learnMore/help/_help';
+@import '../components/homePage/learnMore/information/_information';
+
+//Company about
+@import '../components/About/About';
+
+//Turboair about
+@import '../components/aboutTurboair/aboutTurboair';
+
+//Body cover
+@import '../components/cover/cover';
+@import '../components/homePage/header/navbar/modal/_modal';
+
+//Authorized stores
+@import '../components/authorizedStoresPage/_authorizedStoresPage';
+
+
+
+//Contact page
+@import '../components/contactPage/_contactPage';
+@import '../components/contactPage/contact/_contact';
+@import '../components/contactPage/officeDetails/_officeDetails';
+@import '../components/contactPage/storeDetails/_storeDetails';
+
+
+//Products Page
+@import '../components/productsPage/_productsPage';
+
+//Details Pages
+@import '../components/filtration/_filtration';
+@import '../components/installation/_installation';
+@import '../components/airflowMethod/_airflowMethod';
+@import '../components/airflowPower/airflowPower';
+@import '../components/airflowMethod/_airflowMethod';

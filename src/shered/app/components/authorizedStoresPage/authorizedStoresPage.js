@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import { getAuthorizedStores } from '../../Redux/action';
+import { findAuthorizedStores } from '../../Redux/actions/authorizedStores';
 import { connect } from 'react-redux';
 
 class AuthorizedStores extends Component {
-
-    componentDidMount() {
-        this.props.dispatch(getAuthorizedStores());
-    }
     render() {
         return (
             <div className="authorizedSellers">
-                <div className="authorizedSellers__section">
-                    <h1 className="authorizedSellers__section-title">משווקים מורשים</h1>
+                <div className="stripes">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
+                <h1 className="authorizedSellers-title">משווקים מורשים</h1>
+                <p className="authorizedSellers-paragraph">שרות מוצרים קטנים הנתמך במעבדה ראשית ומחסן חלפים במרכז הלוגיסטי באשדוד ויותר מ-20 מעבדות שרות בפריסה ארצית.</p>
                 <div className="authorizedSellers-main">
+                    <div className="authorizedSellers-main-input">
+                        <input onKeyDown={this.props.findStores} name="search" id="searchStoreInput" placeholder="יש להזין את העיר הרצויה..." type="text" />
+                        <ion-icon onClick={this.props.findStores} name="search" id="search-authorized-stores"></ion-icon>
+                    </div>
+                    <p className="authorizedSellers-main-instructions">* במידה ולא הוזן שם העיר/ישוב לחיצה על המקש ״אנטר״ תציג את רשימת החנויות המלאה</p>
                     <div className="authorizedSellers-main-chart">
                         <div className="authorizedSellers-main-chart-header">
                             <h1>עיר</h1>
@@ -46,8 +53,14 @@ class AuthorizedStores extends Component {
 
 const mapStateToProps = state => {
     return {
-        authorizedStoresList: state.authorizedStores
+        authorizedStoresList: state.storesReducer.authorizedStores
     }
 }
 
-export default connect(mapStateToProps, null)(AuthorizedStores);
+const mapDispatchToProps = dispatch => {
+    return {
+        findStores: (e) => dispatch(findAuthorizedStores(e))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AuthorizedStores);

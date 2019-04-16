@@ -1,20 +1,13 @@
 .footer {
-    -webkit-clip-path: polygon(0 15%, 100% 40%, 100% 100%, 0 100%);
-    clip-path: polygon(0 15%, 100% 40%, 100% 100%, 0 100%);
-    background-color: rgba(226, 226, 226, 0.294);
+    background-color: #f6f9fc;
     width: 100%;
-    padding-top: 500px;
-
-    @media screen and(max-width: 900px) {
-        -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
-        clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
-    }
+    padding-top: 50px;
 
     
     &-line {
         background-color: rgba(160, 160, 160, 0.322);
         height: 1px;
-        margin-top: 20rem;
+        margin: 0;
         border: none;
     }
 
@@ -22,16 +15,16 @@
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
-        padding: 15rem 0 20rem 0;
+        padding: 150px 0;
 
-        @media screen and(max-width: 1300px) {
-            padding: 15rem 20px 20rem 20px;
-        }
+        // @media screen and(max-width: 1300px) {
+        //     padding: 15rem 20px 20rem 20px;
+        // }
     
-        @media screen and (max-width: 600px) {
-            flex-direction: column;
-            padding: 5rem 20px 5rem 20px;
-        }
+        // @media screen and (max-width: 600px) {
+        //     flex-direction: column;
+        //     padding: 5rem 20px 5rem 20px;
+        // }
 
 
         &-companyDetails {
