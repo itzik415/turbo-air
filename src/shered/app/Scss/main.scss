@@ -13,7 +13,9 @@
 @import '../components/homePage/header/mainContent/_mainContent';
 @import '../components/homePage/header/navbar/_navbar';
 @import '../components/homePage/header/navbar/hamburger/_hamburger';
-//Tool tips
+@import '../components/homePage/header/navbar/cart/_cart';
+
+//ToolTips
 @import '../components/homePage/header/navbar/toolTip/_toolTip';
 
 @import '../components/homePage/footer/_footer';
@@ -48,10 +50,12 @@
 
 //Products Page
 @import '../components/productsPage/_productsPage';
+@import '../components/productsPage/productModal/_productModal';
+
 
 //Details Pages
 @import '../components/filtration/_filtration';
 @import '../components/installation/_installation';
 @import '../components/airflowMethod/_airflowMethod';
 @import '../components/airflowPower/airflowPower';
-@import '../components/airflowMethod/_airflowMethod';
+@import '../components/safety/_safety';

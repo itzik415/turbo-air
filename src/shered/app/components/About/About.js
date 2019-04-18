@@ -1,10 +1,8 @@
 import React from 'react';
-import Navbar from '../homePage/header/navbar/navbar';
 
 const about = () => {
     return (
         <div className="about">
-            <Navbar />
             <div className="about-main">
                 <div className="about-main-header">
                     <h1 className="about-main-header-title"> חברת שאוליאן סחר בע"מ</h1>

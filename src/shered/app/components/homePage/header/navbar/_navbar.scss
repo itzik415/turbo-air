@@ -50,7 +50,8 @@
                 color: white;
                 cursor: pointer;
                 width: 25%;
-                display: flex;
+                display: flex; 
+                align-items: center;
                 justify-content: center;
                 transition: .2s;
                 padding: 18px 0;
@@ -63,6 +64,7 @@
         &-right {
             color: white;
             display: flex;
+            align-items: center;
             width: 8%;
             margin-left: 20px;
             transition: .3s;
@@ -106,7 +108,8 @@
                 
                 &:last-child {
                     position: absolute;
-                    right: -20px;
+                    right: -18px;
+                    top: 2px;
                     padding-right: 20px;
                 }
 
@@ -148,3 +151,81 @@
     position: absolute;
     outline: none;
 }
+
+.products-nav {
+    color: $title;
+    transition: .3s;
+    font-weight: 500;
+
+    &:hover {
+        color: white;
+    }
+}
+
+#arrow-down {
+    margin-right: 8px;
+}
+
+.dropdown-toggle {
+    background-color: transparent;
+    border: none;
+}
+
+.dropdown-menu {
+    position: absolute;
+    outline: none;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 55px;
+    border-radius: 7px;
+    white-space: nowrap;
+
+    &-square {
+        content: '';
+        position: absolute;
+        top: -7px;
+        left: 50%;
+        z-index: -1;
+        transform: rotate(45deg);
+        width: 15px;
+        height: 15px;
+        background-color: white;
+    }
+}
+
+.dropdown-item {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: .3s;
+
+    &:hover {
+        transform: scale(1.05);
+        border-radius: 7px;
+        box-shadow: 1px 1px 10px grey;
+    }
+}
+
+.dropdown-toggle {
+    font-size: 1.6rem;
+    color: white;
+    outline: none;
+
+    &::after {
+        display: none;
+    }
+}
+
+.btn-group {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    outline: none;
+    transition: .3s;
+}
+
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }

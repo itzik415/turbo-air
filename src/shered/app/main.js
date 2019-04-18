@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import { Route, Switch } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { store } from './Redux/store'
 import routes from './routes'
 import NoMatch from './noMatch'
 import FooterBottom from './components/homePage/footer/footerBottom/footerBottom';
@@ -34,8 +36,13 @@ class Main extends Component {
                 <FooterBottom />
             </div>
         )
-
     }
 }
 
-export default Main;
+// const mapDispatchToProps = dispatch => {
+//     return {
+//         click: () => dispatch(onClickCloseAll())
+//     }
+// }
+
+export default connect(null, null)(Main);

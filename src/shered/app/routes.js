@@ -10,8 +10,6 @@ import AirflowMethod from './components/airflowMethod/airflowMethod';
 import Filtration from './components/filtration/filtration';
 import Safety from './components/safety/safety';
 
-
-
 const routes = [
     {
         path: '/',

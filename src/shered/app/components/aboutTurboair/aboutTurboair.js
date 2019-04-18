@@ -1,10 +1,8 @@
 import React from 'react';
-import Navbar from '../homePage/header/navbar/navbar';
 
 const about = () => {
     return (
         <div className="aboutTurboair">
-            <Navbar />
             <div className="aboutTurboair-main">
                 <div className="aboutTurboair-main-middle">
                     <div className="aboutTurboair-main-middle-right">

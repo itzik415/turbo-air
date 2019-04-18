@@ -3,7 +3,6 @@ import Header from './header/header';
 import BrandAbout from './brandAbout/brandAbout';
 import Products from './products/products';
 import LearnMore from './learnMore/learnMore';
-import Footer from './footer/footer';
 
 class HomePage extends Component {
     render() {

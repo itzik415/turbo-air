@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import Navbar from '../homePage/header/navbar/navbar';
+import ProductModal from './productModal/productModel';
 
 class ProductsPage extends Component {
 
@@ -35,7 +36,7 @@ class ProductsPage extends Component {
                         <div className="ribbon ribbon-primary">norma</div>
                         <div style={backgroundStyle} className="productsPage-items-product-background"></div>
                         <div className="productsPage-items-product-cover">
-                            <ion-icon name="expand" id="item-expand"></ion-icon>
+                            <ion-icon name="expand" id="item-expand" data-toggle="modal" data-target="#product-image-modal"></ion-icon>
                             <div id="item-search-div">
                                 <p>לצפיה</p>
                                 <ion-icon name="search" id="item-search"></ion-icon>
@@ -51,71 +52,7 @@ class ProductsPage extends Component {
                         <div className="ribbon ribbon-primary">norma</div>
                         <div style={backgroundStyle} className="productsPage-items-product-background"></div>
                         <div className="productsPage-items-product-cover">
-                            <ion-icon name="expand" id="item-expand"></ion-icon>
-                            <div id="item-search-div">
-                                <p>לצפיה</p>
-                                <ion-icon name="search" id="item-search"></ion-icon>
-                            </div>
-                            <ion-icon name="cart" id="item-cart"></ion-icon>
-                        </div>
-                        <div className="productsPage-items-product-details">
-                            <p className="productsPage-items-product-details-category">קולטי קיר</p>
-                            <p className="productsPage-items-product-details-price">₪ 40.00</p>
-                        </div>
-                    </div>
-                    <div className="productsPage-items-product">
-                        <div className="ribbon ribbon-primary">norma</div>
-                        <div style={backgroundStyle} className="productsPage-items-product-background"></div>
-                        <div className="productsPage-items-product-cover">
-                            <ion-icon name="expand" id="item-expand"></ion-icon>
-                            <div id="item-search-div">
-                                <p>לצפיה</p>
-                                <ion-icon name="search" id="item-search"></ion-icon>
-                            </div>
-                            <ion-icon name="cart" id="item-cart"></ion-icon>
-                        </div>
-                        <div className="productsPage-items-product-details">
-                            <p className="productsPage-items-product-details-category">קולטי קיר</p>
-                            <p className="productsPage-items-product-details-price">₪ 40.00</p>
-                        </div>
-                    </div>
-                    <div className="productsPage-items-product">
-                        <div className="ribbon ribbon-primary">norma</div>
-                        <div style={backgroundStyle} className="productsPage-items-product-background"></div>
-                        <div className="productsPage-items-product-cover">
-                            <ion-icon name="expand" id="item-expand"></ion-icon>
-                            <div id="item-search-div">
-                                <p>לצפיה</p>
-                                <ion-icon name="search" id="item-search"></ion-icon>
-                            </div>
-                            <ion-icon name="cart" id="item-cart"></ion-icon>
-                        </div>
-                        <div className="productsPage-items-product-details">
-                            <p className="productsPage-items-product-details-category">קולטי קיר</p>
-                            <p className="productsPage-items-product-details-price">₪ 40.00</p>
-                        </div>
-                    </div>
-                    <div className="productsPage-items-product">
-                        <div className="ribbon ribbon-primary">norma</div>
-                        <div style={backgroundStyle} className="productsPage-items-product-background"></div>
-                        <div className="productsPage-items-product-cover">
-                            <ion-icon name="expand" id="item-expand"></ion-icon>
-                            <div id="item-search-div">
-                                <p>לצפיה</p>
-                                <ion-icon name="search" id="item-search"></ion-icon>
-                            </div>
-                            <ion-icon name="cart" id="item-cart"></ion-icon>
-                        </div>
-                        <div className="productsPage-items-product-details">
-                            <p className="productsPage-items-product-details-category">קולטי קיר</p>
-                            <p className="productsPage-items-product-details-price">₪ 40.00</p>
-                        </div>
-                    </div>
-                    <div className="productsPage-items-product">
-                        <div className="ribbon ribbon-primary">norma</div>
-                        <div style={backgroundStyle} className="productsPage-items-product-background"></div>
-                        <div className="productsPage-items-product-cover">
-                            <ion-icon name="expand" id="item-expand"></ion-icon>
+                            <ion-icon name="expand" id="item-expand" data-toggle="modal" data-target="#product-image-modal"></ion-icon>
                             <div id="item-search-div">
                                 <p>לצפיה</p>
                                 <ion-icon name="search" id="item-search"></ion-icon>
@@ -128,6 +65,7 @@ class ProductsPage extends Component {
                         </div>
                     </div>
                 </div>
+                <ProductModal />
             </div>   
         );
     }
