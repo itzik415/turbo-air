@@ -8,8 +8,9 @@ class Installation extends Component {
             <div className="installation">
                 <h1 className="installation-title">התקנה</h1>
                 <h1 className="installation-text">כיצד להתקין את קולט האדים שלכם בצורה הנכונה ביותר</h1>
-                <img src="https://storage.googleapis.com/turboair-israel/details/details-1.jpg" alt="שיטות שאיבת אוויר" />
-
+                <p>
+                    התקנה נכונה חשובה כדי להבטיח כי קולט האדים עובד במיטבו. יש לעקוב אחר הצעדים המתוארים בחוברת ההדרכה של המוצר. בנוסף, הקפד להתקין את קולט האדים במרחק המינימלי מהכיריים שברשותך.
+                </p>
                 <div className="stripes">
                     <span></span>
                     <span></span>

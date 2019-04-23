@@ -1,0 +1,76 @@
+.tooltip2 {
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    top: 85px;
+    transform: rotateX(-90deg);
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: top;
+    color: black;
+    right: 0;
+    transition: .3s;
+    font-size: 2rem;
+    z-index: 100000000;
+
+    &-first,
+    &-second,
+    &-third,
+    &-fourth,
+    &-fifth {
+        display: flex;
+        text-align: start;
+        align-items: center;
+        padding: 3rem 5.5rem;
+        background: white;
+        border-radius: 5px;
+        margin-left: auto;
+        border: 1px solid grey;
+        transition: .3s;
+        z-index: 2;
+
+        @media screen and(max-width: 500px) {
+            padding: 1.5rem 2.5rem;    
+        }
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.01);
+            box-shadow: 1px 1px 10px grey;
+        }
+
+        &-img {
+            width: 40px;
+            margin-left: 10px;
+        }
+
+        &-div {
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-start;
+            animation: moveLeft .3s;
+
+            &-title {
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: grey;
+                margin: 0;
+            }
+            
+            &-text {
+                font-size: 1.5rem;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+    }
+}
+
+#toolTip-icons {
+    font-size: 40px;
+    margin-left: 10px;
+
+    @media screen and(max-width: 500px) {
+        font-size: 30px;
+    }
+}

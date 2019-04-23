@@ -4,7 +4,7 @@ import MainContent from './mainContent/mainContent';
 const header = (props) => {
     return (
         <div className="header" style={props.translateValue}>  
-            <img src="https://storage.googleapis.com/turboair-israel/products/Gioia.png" alt="קולט אדים Gioia"/>
+            <img src="https://storage.googleapis.com/turboair-israel/products/Gioia-no-background.png" alt="קולט אדים Gioia"/>
             <MainContent />
             <div className="stripes">
                 <span></span>

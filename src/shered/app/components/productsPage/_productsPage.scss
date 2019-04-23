@@ -1,5 +1,6 @@
 .productsPage {
     width: 100%;
+    padding-top: 100px;
     
     .stripes {
         top: 0px;
@@ -114,7 +115,7 @@
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
 
         &-product {
             display: flex;

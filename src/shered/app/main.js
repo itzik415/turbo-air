@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { store } from './Redux/store'
+// import { store } from './Redux/store'
 import routes from './routes'
 import NoMatch from './noMatch'
 import FooterBottom from './components/homePage/footer/footerBottom/footerBottom';
 import Footer from './components/homePage/footer/footer';
 import Navbar from './components/homePage/header/navbar/navbar';
+import ResponsiveNavbar from './components/homePage/header/responsiveNavbar/responsiveNavbar';
 import Cover from './components/cover/cover';
 import ScrollToTop from './components/scrollToTop/scrollToTop';
 import SearchModal from './components/homePage/header/navbar/modal/modal';
@@ -19,6 +20,7 @@ class Main extends Component {
                 <SearchModal />
                 <ScrollToTop />
                 <Navbar />
+                <ResponsiveNavbar />
                 <Switch>
                     {routes.map(( {path, exact, component: C, ...rest}) => (
                         <Route 

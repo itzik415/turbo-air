@@ -1,5 +1,6 @@
 //Opening the modal search
 export const onClickOpenSearch = () => {
+    console.log('df')
     return function (dispatch) {
         document.body.style.overflow = 'hidden';
         dispatch({type: 'OPEN_SEARCH'})

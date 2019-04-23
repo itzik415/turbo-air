@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import Hamburger from './hamburger/hamburger';
+import React from 'react';
 import CartModal from './cart/cart';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -9,35 +8,38 @@ import DetailsToolTip from './toolTip/details/details';
 import SupportToolTip from './toolTip/support/support';
 
 
-class Navbar extends Component {
-  render() {
-    return (
-      <div className="navbar">  
-          <div className="navbar__inner">
-            <Hamburger />
-            <div className="navbar__inner-right">
-                <div className="navbar__inner-right-drop" style={{transform: this.props.transformScale}} onClick={this.props.click}>
+const navbar = (props) => {
+  return (
+    <div className="navbar">  
+        <div className="navbar-top">
+            <div className="navbar-top-right">
+                <div className="navbar-top-right-drop" style={{transform: props.transformScale}} onClick={props.click}>
                   <ion-icon name="search" id="search"></ion-icon>
                 </div>
-                <div className="navbar__inner-right-drop" style={{transform: this.props.transformScale}}>
-                  <span className="navbar__inner-right-drop-quantity">0</span>
-                  <CartModal display={this.props.scale}/>
+                <div className="navbar-top-right-drop" style={{transform: props.transformScale}}>
+                  <span className="navbar-top-right-drop-quantity">7</span>
+                  <CartModal display={props.scale}/>
                 </div>
-                <p className="navbar__inner-right-drop" style={{transform: this.props.transformScale2}}>
+                <div className="navbar-top-right-drop" style={{transform: props.transformScale2}}>
                   <ion-icon name="close" id="close"></ion-icon>
-                </p>
+                </div>
             </div>
-            <div className="navbar__inner-middle">
-                <AboutToolTip scale={this.props.transformScale}/>
-                <DetailsToolTip scale={this.props.transformScale}/>
-                <div style={{transform: this.props.transformScale}} className="navbar__inner-middle-drop"><Link to="/products" id="Link" className="products-nav">מוצרים</Link></div>
-                <SupportToolTip scale={this.props.transformScale}/>
+            <div className="navbar-top-language">
+                <p>HE</p>
+                <img src="https://storage.googleapis.com/turboair-israel/general-images/israel-flag-icon-32.png" alt="דגל ארץ ישראל" />
             </div>
-            <Link id="Link" to="/"><div className="navbar__inner-left">turboair</div></Link>
+        </div>
+        <div className="navbar-bottom">
+          <div className="navbar-bottom-right">
+              <div style={{transform: props.transformScale}} className="navbar-bottom-right-drop"><Link to="/products" id="Link" className="products-nav">מוצרים</Link></div>
+              <AboutToolTip scale={props.transformScale}/>
+              <DetailsToolTip scale={props.transformScale}/>
+              <SupportToolTip scale={props.transformScale}/>
           </div>
-      </div>
-    );
-  }
+          <Link id="Link" to="/"><div className="navbar-bottom-left">turboair</div></Link>
+        </div>
+    </div>
+  );
 }
 
 const mapStateToProps = state => {
@@ -54,4 +56,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
+export default connect(mapStateToProps, mapDispatchToProps)(navbar);

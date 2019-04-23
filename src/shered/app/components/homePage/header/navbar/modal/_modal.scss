@@ -1,21 +1,25 @@
 .searchModal {
     padding: 0;
-    position: relative;
     display: flex;
     border: 2px solid black;
     position: absolute;
-    left: 34%;
-    right: 34%;
+    left: 32%;
+    right: 32%;
     top: -70px;
     z-index: 10000;
     transition: .3s;
     border-radius: 20px;
+
+    @media screen and(max-width: 1000px) {
+        left: 5%;
+        right: 5%;
+    }
     
     input {
         border: none;
         z-index: 10000000;
         width: 100%;
-        padding: 1.5rem;
+        padding: 1.1rem;
         border-radius: 20px;
         font-size: 2rem;
         outline: none;
@@ -27,12 +31,13 @@
     position: absolute;
     left: 0;
     z-index: 10000000;
+    padding: 11px;
     cursor: pointer;
     border-radius: 17px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     color: white;
     background-color: black;
-    font-size: 60px;
-    outline: noen;
+    font-size: 30px;
+    outline: none;
 }

@@ -1,109 +1,67 @@
 .navbar {
-    padding-top: 10px;
-    width: 100%;
+    padding: 10px 0 0 0;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1000;
     right: 0;
-    
-    &__inner {
-        width: 1200px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media screen and(max-width: 1250px) {
+        padding: 10px 20px;
+    }
+
+    @media screen and(max-width: 1001px) {
+        display: none;
+    }
+
+    &-top {
         display: flex;
-        z-index: 1000;
+        justify-content: flex-start;
         align-items: center;
-        margin: 0 auto;
-        position: relative;
+        padding: 10px 0px;
+        border-bottom: 1px solid rgba($grey-dark3, 0.1);
+        width: 100%;
 
-        @media screen and(max-width: 1200px) {
-            padding: 0 20px;
-        }
-
-        @media screen and(max-width: 600px) {
-            padding: 0;
-        }
-    
-        &-left {
-            color: white;
+        &-language {
             display: flex;
-            font-size: 3.5rem;
-            font-weight: 500;
-            width: 35%;
-            
-            @media screen and(max-width: 600px) {
-                width: 50%;
-                padding-left: 10px;
-            }
-        }
-        
-        &-middle {
-            display: flex;
-            color: white;
-            margin-left: auto;
-            width: 45%;
-            position: relative;
+            align-items: center;
+            margin-right: auto;
 
-            @media screen and(max-width: 1000px) {
-                display: none;
+            img {
+                width: 23px;
+                height: 18px;
             }
             
-            &-drop {
-                color: white;
-                cursor: pointer;
-                width: 25%;
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                transition: .2s;
-                padding: 18px 0;
-                position: relative;
-                font-size: 1.6rem;
-                font-weight: 300;
+            p {
+                font-size: 1.4rem;
+                color: $grey-dark3;
+                margin: 0 auto 0 5px;
             }
         }
-        
+
         &-right {
             color: white;
             display: flex;
             align-items: center;
-            width: 8%;
             margin-left: 20px;
+            z-index: 1000000000;
             transition: .3s;
             position: relative;
 
-            @media screen and(max-width: 1000px) {
-                margin-left: auto;
-            }
-
-            @media screen and(max-width: 600px) {
-                width: 50%;
-            }
 
             &-drop {
-                position: relative;
-                margin: 0;
-                transition: .6s;
-
-                @media screen and(max-width: 600px) {
-                    margin: 0;
-                }
-
-                button {
-                    background-color: transparent;
-                    border: none;
-                }
+                transition: .3s;
 
                 &:first-child {
-                    padding-left: 10px;
+                    padding-left: 20px;
                 }
 
                 &:nth-child(2) {
-                    padding-right: 10px;
-                    border-right: 2px solid white;
-
-                    @media screen and(max-width: 600px) {
-                        right: 0;
-                        top: -10px;
-                    }
+                    padding-left: 20px;
                 }
                 
                 &:last-child {
@@ -116,19 +74,55 @@
                 &-quantity {
                     position: absolute;
                     font-size: 12px;
-                    border-radius: 50%;
-                    background-color: rgb(63, 63, 63);
-                    padding: 4px 7.5px;
-                    color: white;
+                    color: $grey-dark3;
                     margin: 0;
-                    z-index: 100;
-                    top: -20px;
-                    left: 14px;
-
-                    @media screen and(max-width: 1000px) {
-                        display: none;                       
-                    }
+                    top: -16px;
+                    right: 5px;
                 }
+            }
+        }
+    }
+    
+    &-bottom {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+    
+        &-left {
+            color: $grey-dark;
+            display: flex;
+            font-size: 3.5rem;
+            font-weight: 500;
+            width: 35%;
+            
+            @media screen and(max-width: 600px) {
+                width: 50%;
+                padding-left: 10px;
+            }
+        }
+        
+        &-right {
+            display: flex;
+            margin-left: auto;
+            width: 45%;
+            position: relative;
+
+            @media screen and(max-width: 1000px) {
+                display: none;
+            }
+            
+            &-drop {
+                margin-left: 8rem;
+                cursor: pointer;
+                display: flex; 
+                align-items: center;
+                justify-content: flex-start;
+                transition: .2s;
+                padding: 18px 0;
+                position: relative;
+                font-size: 1.6rem;
+                font-weight: 300;
             }
         }
     }
@@ -138,22 +132,13 @@
 #cart,
 #close {
     cursor: pointer;
-    font-size: 2.3rem;
-    color: white;
-    outline: noen;
-
-    @media screen and(max-width: 1000px) {
-        display: none;                       
-    }
-}
-
-#close {
-    position: absolute;
+    font-size: 2rem;
+    color: $grey-dark3;
     outline: none;
 }
 
 .products-nav {
-    color: $title;
+    color: $blue-dark;
     transition: .3s;
     font-weight: 500;
 
@@ -169,6 +154,7 @@
 .dropdown-toggle {
     background-color: transparent;
     border: none;
+    padding: 0;
 }
 
 .dropdown-menu {
@@ -179,6 +165,10 @@
     top: 55px;
     border-radius: 7px;
     white-space: nowrap;
+    
+    @media screen and(max-width: 1000px) {
+        transform: translate3d(-235px, 27px, 0px) !important;
+    }
 
     &-square {
         content: '';
@@ -209,7 +199,7 @@
 
 .dropdown-toggle {
     font-size: 1.6rem;
-    color: white;
+    color: $grey-dark3;
     outline: none;
 
     &::after {
@@ -218,9 +208,9 @@
 }
 
 .btn-group {
-    width: 25%;
+    margin-left: 8rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     outline: none;
     transition: .3s;
 }

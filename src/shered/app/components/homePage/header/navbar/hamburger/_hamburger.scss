@@ -1,7 +1,5 @@
 
 .hamburger {
-    padding: 15px 15px;
-    display: none;
     cursor: pointer;
     transition-property: opacity, filter;
     transition-duration: 0.15s;
@@ -11,7 +9,7 @@
     text-transform: none;
     background-color: transparent;
     border: 0;
-    margin: 0;
+    margin: 0 0 0 auto;
     overflow: visible; 
 
     @media screen and(max-width: 1000px) {

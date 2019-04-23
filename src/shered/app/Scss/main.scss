@@ -14,9 +14,12 @@
 @import '../components/homePage/header/navbar/_navbar';
 @import '../components/homePage/header/navbar/hamburger/_hamburger';
 @import '../components/homePage/header/navbar/cart/_cart';
+@import '../components/homePage/header/responsiveNavbar/_responsiveNavbar';
+@import '../components/homePage/header/responsiveNavbar/mainNav/_mainNav';
 
 //ToolTips
 @import '../components/homePage/header/navbar/toolTip/_toolTip';
+@import '../components/homePage/header/responsiveNavbar/mainNav/toolTip/_toolTip';
 
 @import '../components/homePage/footer/_footer';
 @import '../components/homePage/footer/footerBottom/_footerBottom';
