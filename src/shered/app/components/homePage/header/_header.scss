@@ -2,13 +2,22 @@
     background: #f6f9fc;
     background: linear-gradient(191deg, rgba(255, 164, 213, 0.2) 71%, #f6f9fc 29%);
 
-    img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-        opacity: 0.9;
+    &-images {
+        max-width: 1200px;
+
+        img {
+            position: absolute;
+            top: 0px;
+            z-index: 1;
+            opacity: 1;
+            right: 38%;
+            
+            @media screen and(max-width: 1198px) {
+                right: 430px;
+            }
+        }
     }
+
 
     .stripes {
         top: 0;

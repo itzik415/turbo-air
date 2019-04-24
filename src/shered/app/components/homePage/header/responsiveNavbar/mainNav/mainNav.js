@@ -25,7 +25,7 @@ const mainNav = (props) => {
                         </div>
                     </div>
 
-                    <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div id="collapseOne" className="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                         <div className="card-body px-0">
                             <About />
                         </div>
@@ -39,7 +39,7 @@ const mainNav = (props) => {
                         </div>
                     </div>
 
-                    <div id="collapseTwo" className="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div className="card-body px-0">
                             <Details />
                         </div>
@@ -53,7 +53,7 @@ const mainNav = (props) => {
                         </div>
                     </div>
 
-                    <div id="collapseThree" className="collapse show" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                         <div className="card-body px-0">
                             <Support />
                         </div>

@@ -11,6 +11,7 @@ class Installation extends Component {
                 <p>
                     התקנה נכונה חשובה כדי להבטיח כי קולט האדים עובד במיטבו. יש לעקוב אחר הצעדים המתוארים בחוברת ההדרכה של המוצר. בנוסף, הקפד להתקין את קולט האדים במרחק המינימלי מהכיריים שברשותך.
                 </p>
+                <img src="http://www.turboair.com/row/wp-content/uploads/sites/9/2015/10/TT14-2.jpg" alt="התקנה"/>
                 <div className="stripes">
                     <span></span>
                     <span></span>

@@ -2,7 +2,8 @@ export const initialState = {
     visibility: 'hidden',
     opacity: 0,
     backgroundColor: 'transparent',
-    position: 'absolute'
+    position: 'absolute',
+    fontColor: '#383838'
 }
 
 export const responsiveNavbarReducer = (state = initialState, action) => {
@@ -13,7 +14,8 @@ export const responsiveNavbarReducer = (state = initialState, action) => {
                 visibility: 'visible',
                 opacity: 1,
                 backgroundColor: '#273444',
-                position: 'fixed'
+                position: 'fixed',
+                fontColor: 'white'
             }
         case 'CLOSE_NAVBAR':
             return {
@@ -21,7 +23,8 @@ export const responsiveNavbarReducer = (state = initialState, action) => {
                 visibility: 'hidden',
                 opacity: 0,
                 backgroundColor: 'transparent',
-                position: 'absolute'
+                position: 'absolute',
+                fontColor: '#383838'
             }
 
         default:

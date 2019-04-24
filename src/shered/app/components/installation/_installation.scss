@@ -4,18 +4,35 @@
     align-items: center;
     padding-top: 100px;
 
+    @media screen and(max-width: 650px) {
+        align-items: flex-start;
+    }
+
     &-title {
         text-align: center;
-        margin: 10rem 0 2rem 0;
+        margin: 10rem 0 1rem 0;
         font-size: 7rem;
         color: $title;
+
+        @media screen and(max-width: 650px) {
+            font-size: 40px;
+            text-align: start;
+            padding-right: 20px;
+        }
     }
 
     &-text {
         text-align: center;
-        margin: 1rem 0;
-        font-size: 2rem;
+        margin: 0 0 2rem 0;
+        font-size: 3rem;
+        font-weight: 300;
         color: $title;
+
+        @media screen and(max-width: 650px) {
+            font-size: 20px;
+            text-align: start;
+            padding-right: 20px;
+        }
     }
 
     p {
@@ -23,16 +40,29 @@
         margin: 1rem auto;
         font-size: 1.8rem;
         text-align: start;
-        padding-bottom: 3rem;
 
         @media screen and(max-width: 850px) {
             padding: 0 20px 30px 20px;
+        }
+
+        @media screen and(max-width: 650px) {
+            font-size: 16px;
+        }
+    }
+
+    img {
+        max-width: 800px;
+        margin: 3rem 0;
+
+        @media screen and(max-width: 850px) {
+            padding: 0 20px;
+            width: 100%;
         }
     }
 
     .stripes {
         top: 0;
-        grid: repeat(10,100px)/repeat(10,1fr);
+        grid: repeat(5,300px)/repeat(10,1fr);
         -webkit-transform-origin: 0;
         transform-origin: 0;
         background: linear-gradient(#507eb1,#709dc7 10%,#dde9f5 38%,#eaf2f9 48%,#f6f9fc 62%, #e2e2e24b 100%);

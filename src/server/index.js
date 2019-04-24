@@ -1,3 +1,4 @@
+require('dotenv').config()
 import React from "react"
 
 import express from "express"
@@ -11,12 +12,23 @@ import serialize from "serialize-javascript"
 import { matchPath, StaticRouter } from 'react-router-dom'
 import Main from '../shered/app/main'
 import routes from '../shered/app/routes'
+const bodyParser = require('body-parser');
+
+const contactEmail = require('./emails/contactEmail');
 
 const app = express();
 
-app.use(cors())
-
 app.use(express.static('public')) // make everything in the public folder available for us
+app.use(cors())
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false}));
+
+app.post('/api/form',(req,res) => {
+    console.log('form api1')
+    const {email, firstName, lastName, phonenumber, message} = req.body;
+    contactEmail(email, firstName, lastName, phonenumber, message)
+    res.end('done!')
+});
 
 app.get('*', (req, res, next) => {
     const activeRoute = routes.find((route) => matchPath(req.url, route)) || {}

@@ -55,12 +55,21 @@
                 font-weight: 500;
                 color: grey;
                 margin: 0;
+
+                @media screen and(max-width: 500px) {
+                    font-size: 1.2rem; 
+                }
             }
             
             &-text {
                 font-size: 1.5rem;
                 font-weight: 500;
                 margin: 0;
+
+                @media screen and(max-width: 500px) {
+                    font-size: 1.2rem;
+                    font-weight: 400; 
+                }
             }
         }
     }

@@ -17,14 +17,14 @@
         display: flex;
         padding: 150px 0;
 
-        // @media screen and(max-width: 1300px) {
-        //     padding: 15rem 20px 20rem 20px;
-        // }
+        @media screen and(max-width: 1250px) {
+            padding: 150px 20px;
+        }
     
-        // @media screen and (max-width: 600px) {
-        //     flex-direction: column;
-        //     padding: 5rem 20px 5rem 20px;
-        // }
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            padding: 50px 20px;
+        }
 
 
         &-companyDetails {

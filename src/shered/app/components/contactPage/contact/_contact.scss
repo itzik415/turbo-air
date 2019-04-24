@@ -16,8 +16,9 @@
         margin-bottom: 3rem;
     }
 
-    @media screen and(max-width: 600px) {
+    @media screen and(max-width: 650px) {
         padding: 0 0 10px 0;
+        margin: 0;
     }
 
     &-firstName, 
@@ -31,7 +32,7 @@
         align-items: center;
         margin: 2rem;
 
-        @media screen and(max-width: 600px) {
+        @media screen and(max-width: 650px) {
             flex-direction: column-reverse;
             align-items: flex-start;
             margin: 2rem 1rem;
@@ -43,7 +44,7 @@
             margin-left: 5px;
             flex: 1;
 
-            @media screen and(max-width: 600px) {
+            @media screen and(max-width: 650px) {
                 font-size: 1.7rem;
             }
 
@@ -66,7 +67,7 @@
                 width: 70%;
             }
 
-            @media screen and(max-width: 600px) {
+            @media screen and(max-width: 650px) {
                 width: 100%;
                 border: none;
                 border-bottom: 1px solid rgb(230, 230, 230);
@@ -85,7 +86,7 @@
             &:focus:invalid {
                 border: 1px solid $orange;
 
-                @media screen and(max-width: 600px) {
+                @media screen and(max-width: 650px) {
                     border: none;
                     border-bottom: 1px solid $orange;
                 }
@@ -94,7 +95,7 @@
             &:focus:valid {
                 border: 1px solid $green;
 
-                @media screen and(max-width: 600px) {
+                @media screen and(max-width: 650px) {
                     border: none;
                     border-bottom: 1px solid $green;
                 }
@@ -124,7 +125,7 @@
                 min-width: 70%;
             }
 
-            @media screen and(max-width: 600px) {
+            @media screen and(max-width: 650px) {
                 max-width: 100%;
                 min-width: 100%;
                 height: 80px;
@@ -142,7 +143,7 @@
             &:focus:invalid {
                 border: 1px solid $orange;
 
-                @media screen and(max-width: 600px) {
+                @media screen and(max-width: 650px) {
                     border: none;
                 }
             }
@@ -150,7 +151,7 @@
             &:focus:valid {
                 border: 1px solid $green;
 
-                @media screen and(max-width: 600px) {
+                @media screen and(max-width: 650px) {
                     border: none;
                 }
             }

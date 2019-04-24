@@ -11,7 +11,8 @@
         width: 45%;
     }
 
-    @media screen and(max-width: 600px){
+    @media screen and(max-width: 650px){
+        margin: 50px 0;
         width: 100%;
     }
 
@@ -20,7 +21,7 @@
         text-align: start;
         color: $title;
 
-        @media screen and(max-width: 600px){
+        @media screen and(max-width: 650px){
             text-align: center;
         }
     }
@@ -31,7 +32,7 @@
         text-align: start;
         flex: 1;
 
-        @media screen and(max-width: 600px){
+        @media screen and(max-width: 650px){
             text-align: center;
         }
 

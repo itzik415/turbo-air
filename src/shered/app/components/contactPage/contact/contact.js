@@ -1,16 +1,16 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { handleSubmit } from '../../../Redux/actions/authorizedStores';
+// import { connect } from 'react-redux';
+import { handleSubmit } from '../../../Redux/actions/contactForm';
 
 const contact = () => {
     return (
-        <form className="contact">
+        <form className="contact" onSubmit={handleSubmit}>
             <div className="contact-firstName">
                 <input 
                     className="contact-firstName-input" 
                     id="first-name"
                     type="text" 
-                    name="name" 
+                    name="firstName" 
                     placeholder="ישראל"
                     required/>
                 <label htmlFor="first-name" className="contact-firstName-text">שם מלא</label>
@@ -20,7 +20,7 @@ const contact = () => {
                     className="contact-familyName-input" 
                     id="last-name"
                     type="text" 
-                    name="name" 
+                    name="lastName" 
                     placeholder="ישראלי"
                     required/>
                 <label htmlFor="last-name" className="contact-familyName-text">שם משפחה</label>

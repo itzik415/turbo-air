@@ -6,7 +6,7 @@ const CartModal = (props) => {
     return (
         <div style={{transform: `scale(${props.display})`}}>
             <button type="button" className="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <ion-icon name="cart" id="cart"></ion-icon>
+                <ion-icon style={{color: props.color}} name="cart" id="cart"></ion-icon>
             </button>
             <div className="cartModal dropdown-menu">
                 <div className="cartModal-container">
@@ -31,4 +31,10 @@ const CartModal = (props) => {
     )
 }
 
-export default connect(null, null)(CartModal);
+const mapStateToProps = state => {
+    return {
+        color: state.responsiveNavbarReducer.fontColor,
+    }
+}
+
+export default connect(mapStateToProps, null)(CartModal);
