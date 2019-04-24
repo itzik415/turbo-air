@@ -24,7 +24,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
 
 app.post('/api/form',(req,res) => {
-    console.log('form api1')
     const {email, firstName, lastName, phonenumber, message} = req.body;
     contactEmail(email, firstName, lastName, phonenumber, message)
     res.end('done!')

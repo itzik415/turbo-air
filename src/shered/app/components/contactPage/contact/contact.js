@@ -1,8 +1,8 @@
 import React from 'react';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 import { handleSubmit } from '../../../Redux/actions/contactForm';
 
-const contact = () => {
+const contact = (props) => {
     return (
         <form className="contact" onSubmit={handleSubmit}>
             <div className="contact-firstName">
@@ -52,8 +52,8 @@ const contact = () => {
                     required></textarea>
                 <label htmlFor="textarea" className="contact-textarea-text">פרטי הפניה<br /><span>אנא נסו לפרט בצורה הטובה ביותר את פרטי הפניה</span></label>
             </div>
-            {/* <div className="contact-message alert alert-success" style={{display: 'none'}}role='alert'>!ההודעה נשלחה בהצלחה</div>
-            <div className="contact-message2 alert alert-danger" style={{display: 'none'}}role='alert'>שליחת ההודעה נכלשה</div> */}
+            <div className="contact-message alert alert-success" style={{display: props.displaySucess}} role='alert'>ההודעה נשלחה בהצלחה!</div>
+            <div className="contact-message2 alert alert-danger" style={{display: props.displayFail}} role='alert'>שליחת ההודעה נכשלה אנא נסה שוב</div>
             <div className="contact-submit">
                 <button type="submit">שלח </button>
             </div>
@@ -61,4 +61,11 @@ const contact = () => {
     )
 }
 
-export default contact;
+const mapStateToProps = state => {
+    return {
+        displaySucess: state.contactFormReducer.displaySucess,
+        displayFail: state.contactFormReducer.displayFail,
+    }
+}
+
+export default connect(mapStateToProps, null)(contact);

@@ -6,7 +6,7 @@ function contactEmail(email, firstName, lastName, phonenumber, message){
 
     const output = `
         <div style="display: flex; flex-direction: column; align-items: flex-end">
-            <h3 style="font-size: 52px; text-align: end;">פנייה מהאתר של המילטון ביץ׳ לשירות לקוחות של שאוליאן</h3>
+            <h3 style="font-size: 52px; text-align: end;">פנייה מהאתר של Turboair לשירות לקוחות</h3>
             <p style="font-size: 30px; text-align: end;"> שם הלקוח: ${firstName} ${lastName}</p>
             <p style="font-size: 30px; text-align: end;">${phonenumber} :טלפון</p>
             <p style="font-size: 30px; text-align: end;">${email} :מייל</p>
