@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 const searchModal = (props) => {
     return (
         <div className="searchModal" style={{visibility: props.visibility, opacity: props.opacity,transform: props.translate}}>
-            <input name="searchModal-search" placeholder="חיפוש..." type="text" />
+            <input name="searchModal-search" placeholder="הקלד והקש אנטר..." type="text" />
             <ion-icon name="search" id="search2"></ion-icon>
         </div>
     )

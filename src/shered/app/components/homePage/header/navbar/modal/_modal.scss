@@ -1,10 +1,11 @@
 .searchModal {
     padding: 0;
     display: flex;
-    border: 2px solid black;
+    align-items: center;
+    border: 1px solid grey;
     position: absolute;
-    left: 32%;
-    right: 32%;
+    left: 30%;
+    right: 30%;
     top: -70px;
     z-index: 10000;
     transition: .3s;
@@ -19,25 +20,28 @@
         border: none;
         z-index: 10000000;
         width: 100%;
-        padding: 1.1rem;
-        border-radius: 20px;
+        padding: 20px 45px 20px 20px;
+        border-radius: 5px;
         font-size: 2rem;
         outline: none;
+
+        &::placeholder {
+            color: rgb(150, 150, 150);
+        }
     }
 }
 
 
 #search2 {
     position: absolute;
-    left: 0;
+    right: 0;
     z-index: 10000000;
     padding: 11px;
     cursor: pointer;
     border-radius: 17px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    color: white;
-    background-color: black;
+    color: rgb(150, 150, 150);
     font-size: 30px;
     outline: none;
 }
