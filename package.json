@@ -5,9 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack --watch & nodemon server.js",
+    "start-dev": "webpack --watch & nodemon server.js",
+    "start": "node server.js",
     "build-css": "node-sass --include-path scss src/shered/app/main.scss   src/shered/app/index.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "engines": {
+    "node": "8.10.0",
+    "npm": "6.4.1"
   },
   "keywords": [],
   "author": "",

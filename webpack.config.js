@@ -21,7 +21,7 @@ const browserConfig = {
       poll: true,
       ignored: /node_modules/
     },
-    mode: 'development',
+    mode: 'production',
     plugins: [
         new webpack.DefinePlugin({
             __isBrowser__: "true"
@@ -43,7 +43,7 @@ const serverConfig = {
         { test: /\.(js)$/, use: 'babel-loader' }
       ]
     },
-    mode: 'development',
+    mode: 'production',
     plugins: [
       new webpack.DefinePlugin({
         __isBrowser__: "false"
